@@ -1,0 +1,42 @@
+@charset "utf-8";
+html{font-size:100px;}
+body{color:#333;}
+body,h1,h2,h3,h4,h5,h6{font-family:"Microsoft YaHei",sans-serif;font-size:.16rem;line-height:1.35;}
+body,input{margin:0;}
+p,ul,h1,h2,h3,h4,h5,h6,dl,ol{margin-top:0;margin-bottom:0;}
+h1,h2,h3,em{font-weight:600;}
+h4,h5,h6{font-weight:normal;}
+dd{margin-left:0;}
+em,i,address{font-style:normal;}
+input,td,th{padding:0;}
+ul{padding-left:0;list-style-type:none;}
+ol{padding-left:0;}
+img{border-style:none;}
+a{text-decoration:none;color:#006eff;}
+a:hover{text-decoration:underline;}
+/* 工具样式 */
+.clearfix:after{content:"";display:block;clear:both;}
+/* 自定义样式 - 网页背景 */
+.bg0{background-image:url(https://static.rivalsa.net/img/bg/0.jpg);}
+/* 自定义样式 - 公告框 */
+.infotip1,.infotip2,.infotip3{margin:.05rem;padding:.03rem .3rem;}
+.infotip1::before,.infotip2::before,.infotip3::before{content:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkgNEg3djJoMlY0em0wIDNIN3Y1aDJWN3ptLTEgN2MtMy4zMDkgMC02LTIuNjkxLTYtNnMyLjY5MS02IDYtNiA2IDIuNjkxIDYgNi0yLjY5MSA2LTYgNnpNOCAwYTggOCAwIDEwMCAxNkE4IDggMCAwMDggMHoiIGZpbGw9IiMwMDZFRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);vertical-align:middle;}
+.infotip1>a::after,.infotip2>a::after,.infotip3>a::after{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PGcgZmlsbD0iIzAwNmVmZiI+PHBhdGggZD0iTTggM2wxLjc5MyAxLjc5M0w2IDguNTg2IDcuNDE0IDEwbDMuNzkzLTMuNzkzTDEzIDhWM3oiLz48cGF0aCBkPSJNMTEgMTFINVY1aDJWM0gzdjEwaDEwVjloLTJ6Ii8+PC9nPjwvc3ZnPg==);vertical-align:middle;}
+.infotip1{color:#0046b9;background-color:#d5e7ff;}
+.infotip2{color:#a04200;background-color:#ffdeaa;}
+.infotip3{color:#b42b3f;background-color:#fbe0e0;}
+.infotip1>span.color1,.infotip2>span.color1,.infotip3>span.color1{color:#ff9d00;}
+.infotip1>span.color2,.infotip2>span.color2,.infotip3>span.color2{color:#e54545;}
+.infotip0 {margin:.1rem;padding:.1rem;border:solid .01rem #70abce;border-left:solid .03rem #00a4ff;}
+.infotip0 .title {margin:.05rem 0;font-weight:600;}
+.infotip0 .title:first-child {margin-top: 0;}
+/* 自定义样式 - 超链接样式 */
+.linkstyle0 a, a.linkstyle0 {color:inherit;}
+.linkstyle0 a:hover, a.linkstyle0:hover {text-decoration:none;}
+.linkstyle0.linkstyle0-color0 a:hover, a.linkstyle0.linkstyle0-color0:hover{color:#006eff;}
+.linkstyle0.linkstyle0-color1 a:hover, a.linkstyle0.linkstyle0-color1:hover{color:#df71a4;}
+/* 自定义样式 - 表格样式 */
+.tablestyle0 table, table.tablestyle0 {width:100%;border-collapse:collapse;table-layout:fixed;}
+.tablestyle0 table td, .tablestyle0 table th, table.tablestyle0 td, table.tablestyle0 th {border:solid 1px #85a9c7;padding:8px 13px;}
+.tablestyle0 table th, table.tablestyle0 th {text-align:left;font-weight:600;color:#000;background-color:#85a9c733;}
+.tablestyle0 table td, table.tablestyle0 td {color:#666;}

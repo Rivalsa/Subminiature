@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html style="font-size:100px;" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="Keywords" Content="关于,Rivalsa,卅卅">
+    <meta name="Description" Content="关于Rivalsa的介绍、网站大事记、如何关注、常用工具及紧急备用页面。">
+    <noscript><meta http-equiv="refresh" content="0;URL=https://static.rivalsa.net/code/error/nojs.html"></noscript>
+    <title>关于Rivalsa</title>
+    <link href="https://static.rivalsa.net/code/css/init_v1.css" rel="stylesheet">
+    <script async src="https://static.rivalsa.net/code/error/ie.js"></script>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            padding: .2rem 0;
+            width: 80%;
+            max-width: 13rem;
+            min-width: 3.5rem;
+            line-height: .58rem;
+            font-size: .2rem;
+        }
+        header > img {
+            display: block;
+            height: 100%;
+            width: auto;
+        }
+        header > ul {
+            display: flex;
+            justify-content: space-between;
+            width: 3.5rem;
+        }
+        @media all and (max-width:820px) {
+            header > ul {
+                display: none;
+            }
+        }
+        main {
+            margin: auto;
+            width: 80%;
+            max-width: 10rem;
+            min-width: 3.5rem;
+            font-weight: 600;
+        }
+        @media all and (max-width:750px) {
+            header {
+                width: 600px;
+            }
+            main {
+                width: 600px;
+            }
+        }
+        @media all and (max-width:600px) {
+            header {
+                width: 100%;
+            }
+            main {
+                width: 100%;
+            }
+        }
+        main > .about-rivalsa-text {
+            display: flex;
+        }
+        main > .about-rivalsa-text > li:first-child {
+            flex: none;
+            width: 2rem;
+            background: url("https://static.rivalsa.net/img/www_rivalsa_cn/logo/20191117180608576831.png") no-repeat center .3rem/2.9rem;
+        }
+        @media all and (max-width:600px) {
+            main > .about-rivalsa-text {
+                flex-direction: column;
+            }
+            main > .about-rivalsa-text > li:first-child {
+                margin: auto;
+                height: 1.6rem;
+                background-position-y: -.2rem;
+            }
+        }
+        main h1 {
+            margin: .3rem auto;
+            font-size: .3rem;
+            color: #000;
+        }
+        main p {
+            margin: .2rem auto;
+            font-size: .18rem;
+            text-align: justify;
+            color: #666;
+        }
+        main > .memorabilia > ul {
+            margin: .2rem;
+            font-size: .18rem;
+        }
+        main > .memorabilia > ul > li:first-child {
+            border-left: solid 5px #8ca8c5;
+            padding: .1rem;
+            background-color: #c8e6ff55;
+        }
+        main > .memorabilia > ul > li:last-child {
+            margin: .1rem .2rem;
+            color: #666;
+        }
+        #tab {
+            display: flex;
+            margin: .5rem auto .1rem;
+            border-bottom: solid 3px #48B2E7;
+            font-size: .18rem;
+        }
+        @media all and (max-width:400px) {
+            #tab {
+                font-size: .14rem;
+            }
+        }
+        #tab > li {
+            padding: 0 .1rem;
+            line-height: .4rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        #tab > li.active {
+            color: #fff;
+            background-color: #48B2E7;
+        }
+        main > .con {
+            height: 1rem;
+        }
+        main > .con:not(.active) {
+            display: none;
+        }
+        main > .items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 1rem);
+            grid-template-rows: repeat(auto-fill, .25rem);
+            justify-content: center;
+            text-align: center;
+        }
+        main > .items > div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            line-height: .25rem;
+            color: inherit;
+            transition: .3s linear;
+        }
+        main > .items > div:hover {
+            color: #006eff;
+        }
+        main > .items > div::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            border-bottom: solid 3px #006eff;
+            transition: .3s linear;
+        }
+        main > .items > div::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            border-bottom: solid 3px #006eff;
+            transition: .3s linear;
+        }
+        main > .items > div:hover::before, main > .items > div:hover::after {
+            width: 50%;
+        }
+        main > .items a {
+            color: inherit;
+            text-decoration: none;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: .2rem auto;
+            min-width: 3.5rem;
+            text-align: center;
+        }
+        @media all and (max-width:400px) {
+            footer {
+                font-size: .12rem;
+            }
+        }
+        footer > p + p {
+            margin-left: .05rem;
+        }
+    </style>
+</head>
+<body class="bg0" style="font-size: .16rem;">
+    <header>
+        <img src="https://static.rivalsa.net/img/logo/sasa_woaini_b.webp" alt="" width="293" height="58">
+        <ul class="linkstyle0 linkstyle0-color0">
+            <li><a href="https://www.rivalsa.net">知识分享</a></li>
+            <li><a href="https://www.rivalsa.net/blog/index.php">网络日志</a></li>
+            <li><a href="https://www.rivalsa.net/workorder/index.php">工单系统</a></li>
+        </ul>
+    </header>
+    <main>
+        <ul class="about-rivalsa-text">
+            <li></li>
+            <li>
+                <h1>关于Rivalsa</h1>
+                <p>大家好，我是Rivalsa，一名九零后，喜欢做点web开发、写写博客、玩玩游戏、录录视频等，您可以通过<a href="https://www.rivalsa.net">RIVALSA知识分享</a>、<a href="https://www.rivalsa.net/blog/index.php">RIVALSA网络日志</a>、<a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a>、<a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a>、<a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a>、<a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a>、<a rel="noopener nofollow" href="https://gitee.com/rivalsa">码云</a>关注我。我还是一名无线电爱好者（BG2KUJ），偶尔在7050kHz(LSB)、14270kHz(USB)、51.4MHz(FM)、145.1MHz(FM)、438.5MHz(FM)上出没。如果您有任何问题，可以随时通过https://www.rivalsa.net/workorder/index.php与我取得联系。</p>
+            </li>
+        </ul>
+        <section class="memorabilia">
+            <h1>网站大事记</h1>
+            <ul>
+                <li>2017年4月7日</li>
+                <li>本网站正式接入Internet</li>
+            </ul>
+            <ul>
+                <li>2017年10月24日</li>
+                <li>本网站博客（WordPress）正式上线</li>
+            </ul>
+            <ul>
+                <li>2020年1月30日</li>
+                <li>用本网站主办方独立编写的全新博客程序替换了WordPress程序，并将博客更名为：RIVALSA网络日志</li>
+            </ul>
+            <ul>
+                <li>2020年4月29日</li>
+                <li>本网站工单系统正式上线</li>
+            </ul>
+            <ul>
+                <li>2020年6月2日</li>
+                <li>本网站斥巨资为域名添加了serverDeleteProhibited、serverTransferProhibited和serverUpdateProhibited状态，并启用DNSSEC为解析记录的可靠性提供保证</li>
+            </ul>
+            <ul>
+                <li>2020年8月30日</li>
+                <li>RIVALSA网络日志正式加入“十年之约”，从加入这个活动起，博客十年不关闭，保持更新和活力</li>
+            </ul>
+        </section>
+        <section>
+            <h1>紧急备用</h1>
+            <p>当本站出现服务器宕机、网络故障等严重错误，且短时间无法修复时，请尝试访问以下地址，本站可能会在此发布问题说明：https://rivalsa.github.io和https://rivalsa.gitee.io</p>
+        </section>
+        <ul id="tab">
+            <li class="active">快速访问</li>
+            <li>常用工具</li>
+        </ul>
+        <!-- 快速访问 -->
+        <section class="con items active">
+            <div><a href="https://www.rivalsa.net">知识分享</a></div>
+            <div><a href="https://www.rivalsa.net/blog/index.php">网络日志</a></div>
+            <div><a rel="noopener nofollow" href="https://i.youku.com/rivalsa" target="_blank">优酷</a></div>
+            <div><a href="https://space.bilibili.com/518370537" target="_blank" rel="nofollow noopener">bilibili</a></div>
+            <div><a href="https://www.douyu.com/7103713" target="_blank" rel="nofollow noopener">斗鱼</a></div>
+            <div><a rel="noopener nofollow" href="https://github.com/rivalsa" target="_blank">Github</a></div>
+            <div><a rel="noopener nofollow" href="https://gitee.com/rivalsa" target="_blank">码云</a></div>
+            <div><a href="https://www.rivalsa.net/workorder/index.php">工单系统</a></div>
+        </section>
+        <!-- 常用工具 -->
+        <section class="con items">
+            <div><a rel="noopener nofollow" target="_blank" href="https://tool.chinaz.com/tools/unixtime.aspx">UNIX时间戳</a></div>
+            <div><a rel="noopener nofollow" target="_blank" href="https://tool.oschina.net/encrypt">编码</a></div>
+            <div><a rel="noopener nofollow" target="_blank" href="http://ip.zxinc.org/">本机IP</a></div>
+            <div><a rel="noopener nofollow" target="_blank" href="https://www.yinsiduanxin.com/">隐私短信</a></div>
+            <div><a rel="noopener nofollow" target="_blank" href="https://cp.anyknew.com/">拷贝兔</a></div>
+        </section>
+    </main>
+    <footer class="linkstyle0 linkstyle0-color0">
+        <p>版权所有 © 2017-2020 Rivalsa 保留所有权利</p>
+        <p>
+            <a rel="noopener nofollow" href="http://beian.miit.gov.cn">吉ICP备17002025号</a>
+            <a rel="noopener nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22242602000144">
+                <img style="vertical-align: middle;" src="https://static.rivalsa.net/img/govbeian.png" width="14"  height="14" alt="备案">吉公网安备22242602000144号
+            </a>
+        </p>
+    </fooret>
+    <script>
+        'use strict'
+        const aTabLi = document.getElementById('tab').children,
+            aCon = document.getElementsByClassName('con');
+        let currentSelect = 0;
+        for(let i = 0 ; i < aTabLi.length ; i++) {
+            aTabLi[i].addEventListener('mouseenter', function() {
+                aTabLi[currentSelect].classList.remove('active');
+                aCon[currentSelect].classList.remove('active');
+                this.classList.add('active');
+                aCon[i].classList.add('active');
+                currentSelect = i;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+(function() {if('ActiveXObject' in window) location.href = 'https://static.rivalsa.net/code/error/ie.html';})();
