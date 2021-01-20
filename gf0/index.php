@@ -109,10 +109,6 @@ if($value) {
         "denyText" => ""
     );
 }
-// if($out["code"]) {
-//     print_r($out);
-    
-// } else {
 ?>
 <!DOCTYPE html>
 <html style="font-size:100px;" lang="zh-CN">
@@ -231,7 +227,9 @@ if($value) {
         <main class="prohibited">
             <p class="title">警告：您即将访问</p>
             <p class="url rsenc"><?php echo $out["url"]; ?></p>
-            <p class="text">此页面被大量网友举报<?php echo $out["denyText"]; ?>，请您谨慎访问。如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。或者您可以尝试访问如下内容：</p>
+            <p class="text">此页面被大量网友举报<?php echo $out["denyText"]; ?>，请您谨慎访问。如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。</p>
+            <p class="text">&nbsp;</p>
+            <p class="text">或者您可以尝试访问如下内容：</p>
             <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
         </main>
 <?php
