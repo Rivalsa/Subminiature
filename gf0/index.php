@@ -23,6 +23,7 @@ if($value) {
                         "url" => "",
                         "warning" => false,
                         "prohibited" => false,
+                        "sanction" => false,
                         "denyText" => ""
                     );
                 } else {
@@ -32,6 +33,7 @@ if($value) {
                         "url" => ($op & 2) ? getRivalsaFontV0($url) : $url,
                         "warning" => ($op & 1) ? false : true,
                         "prohibited" => ($op & 2) ? true : false,
+                        "sanction" => ($op & 8) ? true : false,
                         "denyText" => $denyText
                     );
                 }
@@ -42,6 +44,7 @@ if($value) {
                     "url" => "",
                     "warning" => false,
                     "prohibited" => false,
+                    "sanction" => false,
                     "denyText" => ""
                 );
             }
@@ -65,6 +68,7 @@ if($value) {
                         "url" => "",
                         "warning" => false,
                         "prohibited" => false,
+                        "sanction" => false,
                         "denyText" => ""
                     );
                 } else {
@@ -74,6 +78,7 @@ if($value) {
                         "url" => ($op & 2) ? getRivalsaFontV0($url) : $url,
                         "warning" => ($op & 1) ? false : true,
                         "prohibited" => ($op & 2) ? true : false,
+                        "sanction" => ($op & 8) ? true : false,
                         "denyText" => $denyText
                     );
                 }
@@ -84,6 +89,7 @@ if($value) {
                     "url" => "",
                     "warning" => false,
                     "prohibited" => false,
+                    "sanction" => false,
                     "denyText" => ""
                 );
             }
@@ -96,6 +102,7 @@ if($value) {
                 "url" => "",
                 "warning" => false,
                 "prohibited" => false,
+                "sanction" => false,
                 "denyText" => ""
             );
     }
@@ -106,9 +113,13 @@ if($value) {
         "url" => "",
         "warning" => false,
         "prohibited" => false,
+        "sanction" => false,
         "denyText" => ""
     );
 }
+echo "<!--";
+print_r($out);
+echo "-->";
 ?>
 <!DOCTYPE html>
 <html style="font-size:100px;" lang="zh-CN">
@@ -118,7 +129,7 @@ if($value) {
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <noscript><meta http-equiv="refresh" content="0;URL=https://static.rivalsa.net/code/error/nojs.html"></noscript>
 <?php
-    if(!$out["code"] && !$out["warning"] && !$out["prohibited"]) {
+    if(!$out["code"] && !$out["sanction"] && !$out["warning"] && !$out["prohibited"]) {
 ?>
         <meta http-equiv="refresh" content="0; url=<?php echo $out["url"]; ?>">
 <?php
@@ -211,51 +222,59 @@ if($value) {
             <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
         </main>
 <?php
-    }
-?>
-<?php
-    if(!$out["code"] && $out["warning"] && !$out["prohibited"]) {
+    } else {
+        if($out["sanction"]) {
 ?>
         <main class="warning">
             <p class="title">您即将访问</p>
             <p class="url"><?php echo $out["url"]; ?></p>
-            <p class="text">此页面未经本网站主办方审核，其安全性未知，请谨慎访问。</p>
-            <p class="text">如果您希望继续访问，请您注意隐私及财产安全。</p>
+            <p class="text">对方转跳本网站时显示中间页面，本网站也采取对等措施。</p>
+            <p class="text">您即将访问的网站<span style="color:red;">安全性未知</span>，请您注意隐私及财产安全。</p>
             <div class="go"><a rel="nofollow noopener" href="<?php echo $out["url"]; ?>">继续访问</a></div>
         </main>
 <?php
-    }
-    if(!$out["code"] && $out["prohibited"]) {
+        } else {
+            if($out["prohibited"]) {
 ?>
-        <main class="prohibited">
-            <p class="title">警告：您即将访问</p>
-            <p class="url rsenc"><?php echo $out["url"]; ?></p>
-            <p class="text"><span><?php echo $out["denyText"]; ?></span>，请您谨慎访问。如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。如果您是此网站的站长，可以通过<a target="_blank" href="https://www.rivalsa.net/workorder/index.php">发起工单</a>申请解封。</p>
-            <p class="text">&nbsp;</p>
-            <p class="text">或者您可以尝试访问如下内容：</p>
-            <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
-        </main>
+                <main class="prohibited">
+                    <p class="title">警告：您即将访问</p>
+                    <p class="url rsenc"><?php echo $out["url"]; ?></p>
+                    <p class="text"><span><?php echo $out["denyText"]; ?></span>，请您谨慎访问。如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。如果您是此网站的站长，可以通过<a target="_blank" href="https://www.rivalsa.net/workorder/index.php">发起工单</a>申请解封。</p>
+                    <p class="text">&nbsp;</p>
+                    <p class="text">或者您可以尝试访问如下内容：</p>
+                    <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
+                </main>
 <?php
-    }
-    if(!$out["code"] && $out["warning"] || $out["prohibited"]) {
+            } else {
+                if($out["warning"]) {
 ?>
-        <script>
-            'use strict';
-            const resizeFun = () => {
-                const nowHTMLOffsetWidth = document.documentElement.offsetWidth;
-                if(nowHTMLOffsetWidth < 350) {
-                    document.documentElement.style.fontSize = '51.47px'; 
-                } else if(nowHTMLOffsetWidth < 680) {
-                    document.documentElement.style.fontSize = nowHTMLOffsetWidth / 6.8 + 'px'; 
-                } else {
-                    document.documentElement.style.fontSize = '100px'; 
+                    <main class="warning">
+                        <p class="title">您即将访问</p>
+                        <p class="url"><?php echo $out["url"]; ?></p>
+                        <p class="text">此页面未经本网站主办方审核，其安全性未知，请谨慎访问。</p>
+                        <p class="text">如果您希望继续访问，请您注意隐私及财产安全。</p>
+                        <div class="go"><a rel="nofollow noopener" href="<?php echo $out["url"]; ?>">继续访问</a></div>
+                    </main>
+<?php
                 }
-                return resizeFun;
-            };
-            window.addEventListener('resize', resizeFun());
-        </script>
-<?php
+            }
+        }
     }
 ?>
+    <script>
+        'use strict';
+        const resizeFun = () => {
+            const nowHTMLOffsetWidth = document.documentElement.offsetWidth;
+            if(nowHTMLOffsetWidth < 350) {
+                document.documentElement.style.fontSize = '51.47px'; 
+            } else if(nowHTMLOffsetWidth < 680) {
+                document.documentElement.style.fontSize = nowHTMLOffsetWidth / 6.8 + 'px'; 
+            } else {
+                document.documentElement.style.fontSize = '100px'; 
+            }
+            return resizeFun;
+        };
+        window.addEventListener('resize', resizeFun());
+    </script>
 </body>
 </html>
