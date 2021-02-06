@@ -117,9 +117,6 @@ if($value) {
         "denyText" => ""
     );
 }
-echo "<!--";
-print_r($out);
-echo "-->";
 ?>
 <!DOCTYPE html>
 <html style="font-size:100px;" lang="zh-CN">
