@@ -40,3 +40,14 @@ a:hover{text-decoration:underline;}
 .tablestyle0 table td, .tablestyle0 table th, table.tablestyle0 td, table.tablestyle0 th {border:solid 1px #85a9c7;padding:8px 13px;}
 .tablestyle0 table th, table.tablestyle0 th {text-align:left;font-weight:600;color:#000;background-color:#85a9c733;}
 .tablestyle0 table td, table.tablestyle0 td {color:#666;}
+/* 自定义样式 - 强调文本 */
+.emphasize-level1 {
+    font-weight: 600;
+    text-decoration: underline;
+}
+.emphasize-level2 {
+    font-weight: 600;
+}
+.emphasize-level3 {
+    text-decoration: underline;
+}
