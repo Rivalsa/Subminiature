@@ -234,7 +234,7 @@ if($value) {
             if($out["prohibited"]) {
 ?>
                 <main class="prohibited">
-                    <p class="title">警告：您即将访问</p>
+                    <p class="title">危险：千万别访问</p>
                     <p class="url rsenc"><?php echo $out["url"]; ?></p>
                     <p class="text"><span><?php echo $out["denyText"]; ?></span>如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。如果您是此网站的站长，可以通过<a target="_blank" href="https://www.rivalsa.net/workorder/index.php">发起工单</a>申请解封。</p>
                     <p class="text">&nbsp;</p>
