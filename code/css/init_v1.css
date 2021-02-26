@@ -31,6 +31,7 @@ a:hover{text-decoration:underline;}
 .infotip0 .title {margin:.05rem 0;font-weight:600;}
 .infotip0 .title:first-child {margin-top: 0;}
 /* 自定义样式 - 超链接样式 */
+.linkstyle-full a, a.linkstyle-full {display:block;width:100%;height:100%;}
 .linkstyle0 a, a.linkstyle0 {color:inherit;}
 .linkstyle0 a:hover, a.linkstyle0:hover {text-decoration:none;}
 .linkstyle0.linkstyle0-color0 a:hover, a.linkstyle0.linkstyle0-color0:hover{color:#006eff;}
