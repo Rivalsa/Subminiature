@@ -81,6 +81,17 @@ if($value) {
                         "sanction" => ($op & 8) ? true : false,
                         "denyText" => $denyText
                     );
+                    if($out["prohibited"]) {
+                        $url = "";
+                        for($i = 0; $i < mb_strlen($out["url"]); $i++) {
+                            if($i <= 8 || $i === mb_strlen($out["url"]) - 1 || rand(0,2) !== 0) {
+                                $url .= substr($out["url"], $i, 1);
+                            } else {
+                                $url .= "<span style=\"color:red;\">*</span>";
+                            }
+                        }
+                        $out["url"] = $url;
+                    }
                 }
             } else {
                 $out = array(
@@ -169,8 +180,6 @@ if($value) {
             color: rgb(2, 74, 180);
         }
         main.prohibited > .url {
-            min-width: auto;
-            width: 1rem;
             white-space: nowrap;
             overflow: auto;
             font-family: "rsenc";
@@ -180,6 +189,7 @@ if($value) {
             margin-top: 0;
             margin-bottom: 0;
             font-size: .2rem;
+            text-align: justify;
         }
         main.prohibited > .text {
             color: #777;
@@ -220,7 +230,7 @@ if($value) {
         <main>
             <p class="title"><?php echo $out["msg"] ?></p>
             <p class="text">很抱歉，您请求的内容不存在，请核实您的URL是否有误。或者您可以尝试访问如下内容：</p>
-            <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://gf0.ltd/fksq">反馈社区</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
+            <p class="text"><a href="https://www.rivalsa.net">网络空间</a> | <a href="https://www.rivalsa.net/home.php">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://gf0.ltd/fksq">反馈社区</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a></p>
         </main>
 <?php
     } else {
@@ -240,10 +250,12 @@ if($value) {
                 <main class="prohibited">
                     <p class="title">危险：千万别访问</p>
                     <p class="url"><?php echo $out["url"]; ?></p>
-                    <p class="text"><span><?php echo $out["denyText"]; ?></span>如果您希望继续访问，请您手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。如果您是此网站的站长，可以通过<a target="_blank" href="https://www.rivalsa.net/workorder/index.php">提交工单</a>申请解封。</p>
+                    <p class="text"><span><?php echo $out["denyText"]; ?></span>URL中的<span style="color:red;">*</span>符号为隐藏字符，如果您希望继续访问，请您通过多次刷新获取完整URL，并手动在浏览器地址栏中输入网址，并在访问时注意您的隐私和财产安全。</p>
+                    <p class="text">&nbsp;</p>
+                    <p class="text">如果您是此网站的站长，可以通过<a target="_blank" href="https://www.rivalsa.net/workorder/index.php">提交工单</a>申请解封。</p>
                     <p class="text">&nbsp;</p>
                     <p class="text">或者您可以尝试访问如下内容：</p>
-                    <p class="text"><a href="https://www.rivalsa.net">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://gf0.ltd/fksq">反馈社区</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a> | <a rel="noopener nofollow" href="https://github.com/rivalsa">Github</a> | <a rel="noopener nofollow" href="https://gitee.com.rivalsa">码云</a></p>
+                    <p class="text"><a href="https://www.rivalsa.net">网络空间</a> | <a href="https://www.rivalsa.net/home.php">知识分享</a> | <a href="https://www.rivalsa.net/blog/index.php">网络日志</a> | <a href="https://gf0.ltd/fksq">反馈社区</a> | <a href="https://www.rivalsa.net/workorder/index.php">工单系统</a> | <a rel="noopener nofollow" href="https://weibo.com/rivalsa">微博</a> | <a rel="noopener nofollow" href="https://i.youku.com/rivalsa">优酷</a> | <a rel="noopener nofollow" href="https://space.bilibili.com/518370537">bilibili</a> | <a rel="noopener nofollow" href="https://www.douyu.com/7103713">斗鱼</a></p>
                 </main>
 <?php
             } else {
